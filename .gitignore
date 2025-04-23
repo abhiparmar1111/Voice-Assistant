@@ -1,1 +1,5 @@
 /VoiceAssistant
+/contacts.csv
+siri.db
+/engine/__pycache__
+/engine/cookies.json

@@ -1,10 +1,11 @@
-body{
+body {
     background-color: black;
     overflow-y: hidden;
     overflow-x: hidden;
 
 }
-.square{
+
+.square {
     position: relative;
     width: 400px;
     height: 400px;
@@ -12,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .square span {
     position: absolute;
     top: 0;
@@ -21,39 +23,142 @@ body{
     background-image: radial-gradient(circle, #6b72ff00 40%, #000dff3b 60%);
     box-shadow: 0 0 70px 10px rgba(25, 0, 255, 0.5), inset 0 0 50px rgba(25, 0, 255, 0.3);
     border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-    filter: blur(0.8px); /* Softens edges */
+    filter: blur(0.8px);
+    /* Softens edges */
 }
 
 .square span:nth-child(1) {
     animation: animate1 6s linear infinite;
 }
+
 .square span:nth-child(2) {
     animation: animate2 4s linear infinite;
 }
+
 .square span:nth-child(3) {
     animation: animate3 8s linear infinite;
 }
-@keyframes animate1{
-    0%{
+
+@keyframes animate1 {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
-@keyframes animate2{
-    0%{
+
+@keyframes animate2 {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
-@keyframes animate3{
-    0%{
+
+@keyframes animate3 {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
+}
+
+/*Input field*/
+/* Input Field and Buttons Styling */
+#TextInput {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#chatbox {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #1c1c1c;
+    color: #fff;
+    outline: none;
+    box-shadow: 0 0 15px #000, 0 0 10px #000, 0 0 10px #000, 0 0 4px #0f0cff;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+#chatbox::placeholder {
+    color: #aaa;
+}
+
+/*   
+  #chatbox:focus {
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.575);
+  }
+   */
+/* Button Styling */
+.glow-on-hover {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1c1c1c;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.glow-on-hover:hover {
+    background: radial-gradient(circle, #ff00ff, #4b0082);
+    box-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #8a2be2,
+        0 0 30px #4b0082;
+    transform: scale(1.05);
+}
+
+.siri-message {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#SiriWave .class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-canvas{
+    background-color: #191919;
+}
+.reciever_message{
+    padding: 8px;
+    border: 2px solid cyan;
+    border-radius: 0px 15px 15px 20px;
+    width:auto;
+    color: white;
+    background-color: #0dcaf014;
+}
+.sender_message{
+    padding: 8px;
+    border: 1px solid #0045ff;
+    border-radius: 15px 15px 0px 20px;
+    width:auto;
+    color: white;
+    background-color: #0045ff;
+}
+.width-size{
+    max-width: 80%;
+    width: auto;
 }
